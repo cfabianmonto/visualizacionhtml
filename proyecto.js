@@ -14,7 +14,7 @@ var svg = d3.select("#chart")
   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 // Leer el archivo JSON
-d3.json("https://raw.githubusercontent.com/cfabianmonto/archivos/main/traficodrogas.json").then(function (data) {
+d3.json("https://raw.githubusercontent.com/FabioSuarez1/Herramientasdevisualizaci-n/main/traficodrogas.json").then(function (data) {
 
     //Aqui se comenta para la absorcion del dataset local
 //d3.json("./traficodrogas.json").then(function (data) {
