@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Historico Drogas en España</title>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.3/html2canvas.min.js"></script>
+  
+  <link rel="stylesheet" href="css/style.css">
+ 
+</head>
+
+<body>
+  <h1>Infracciones por tráfico de drogas </h1>
+  <h2>Historico de infracciones por trafico de drogas 2012-2022.</h2>
+  <div id="chart"></div>
+  <button onclick="VerDatos()"><i class="fas fa-download"></i> Ver Datos</button>
+  <button onclick="descargarImagen()"><i class="fas fa-image"></i> Descargar Imagen</button>
+  <script src="proyecto.js"></script>
+  <script>
+    function VerDatos() {
+      let enlace = document.createElement('a');
+      enlace.href = 'https://raw.githubusercontent.com/cfabianmonto/archivos/main/traficodrogas.json';
+      enlace.download = 'datos.json';
+      enlace.click();
+    }
+
+    function descargarImagen() {
+      html2canvas(document.getElementById("chart")).then(function (canvas) {
+        let enlace = document.createElement('a');
+        enlace.href = canvas.toDataURL("image/png");
+        enlace.download = 'Trafico de drogas(2012-2022).png';
+        enlace.click();
+      });
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+* {
+    text-align: justify;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.tooltip {
+    position: absolute;
+    background-color: rgb(143, 138, 138);
+    padding: 5px;
+    border: 1px solid black;
+  }
+
+  h2 {
+    color: slategray;
+  }
+body {
+  background: #181f38;
+  font-family: 'Poppins', monospace;
+  color: white;
+  font-size: .7em;
+  font-weight: 200;
+  letter-spacing: 1px;
+
+  .svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    vertical-align: top;
+    overflow: hidden;
+  }
+  .svg-container svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+html {
+  padding: 20px;
+  font-weight: 300;
+}
+
+main {
+    padding: 60px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 100;
+}
+
+h2 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    font-weight: 200;
+}
+
+
+hr {
+    border-color: white;
+    margin: 10px 0;
+}
+
+figure, canvas {
+    background-color: rgba(255,255,255,.03);
+    padding: 10px 10px 30px;
+}
+
+canvas {
+    width: 100%;
+}
+
+
+/* grid */
+
+[class*='cols'] {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.cols-1 > * {
+    width: 100%;
+    margin: 10px;
+}
+
+.cols-2 > * {
+    width: 50%;
+    margin: 10px
+}
+
+
+@media  (max-width: 800px) {
+
+    main {
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 2.1em;
+        font-weight: 100;
+    }
+
+    [class*='cols'] {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .cols-2 > * {
+        width: 100%;
+    }
+}
